@@ -1,21 +1,13 @@
 from rest_framework import serializers
-from .models import Produto, MovimentacaoEstoque, Usuario
-
-class UsuarioSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Usuario
-        fields = ["id", "nome", "email"]
-
+from .models import Produto, MovimentacaoEstoque
 
 class ProdutoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Produto
-        fields = "__all__"
+        fields = ["id", "nome", "descricao", "preco", "quantidade_estoque", "estoque_minimo"]
 
 
 class MovimentacaoEstoqueSerializer(serializers.ModelSerializer):
-    usuario = UsuarioSerializer(read_only=True)
-
     class Meta:
         model = MovimentacaoEstoque
-        fields = "__all__"
+        fields = ["id", "produto", "tipo", "quantidade", "data"]

@@ -11,12 +11,13 @@ class Usuario(models.Model):
         db_table = "USUARIO"
 
     def save(self, *args, **kwargs):
-        if not self.senha.startswith("pbkdf2_"):
+        if not self.senha.startswith("pbkdf2_sha256$"):
             self.senha = make_password(self.senha)
         super().save(*args, **kwargs)
-    
+
     def __str__(self):
         return self.nome
+
 
 class Produto(models.Model):
     id = models.AutoField(primary_key=True, db_column="ID_PRODUTO")
@@ -28,9 +29,9 @@ class Produto(models.Model):
 
     class Meta:
         db_table = "PRODUTO"
-    
+
     def __str__(self):
-        return self.nome 
+        return self.nome
 
 
 class MovimentacaoEstoque(models.Model):
@@ -61,4 +62,4 @@ class MovimentacaoEstoque(models.Model):
         db_table = "MOVIMENTACAO_ESTOQUE"
 
     def __str__(self):
-        return self.nome
+        return f"{self.produto.nome} - {self.tipo}"

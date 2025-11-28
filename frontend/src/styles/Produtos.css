@@ -1,0 +1,58 @@
+/* ======== PRODUTOS ======== */
+.produtos-container {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.produtos-input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+}
+
+.produtos-button {
+  width: 100%;
+  padding: 12px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.produtos-button:hover {
+  background: #357ab7;
+}
+
+.produtos-table {
+  width: 100%;
+  margin-top: 20px;
+  background: white;
+  border-collapse: collapse;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.produtos-table th {
+  background: #4a90e2;
+  color: white;
+  padding: 12px;
+}
+
+.produtos-table td {
+  padding: 12px;
+}
+
+.produtos-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.produtos-acoes button {
+  margin-right: 5px;
+  padding: 6px 10px;
+}

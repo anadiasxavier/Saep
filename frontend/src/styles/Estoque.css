@@ -1,0 +1,29 @@
+/* ======== ESTOQUE ======== */
+.estoque-container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.estoque-input,
+.estoque-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.estoque-button {
+  width: 100%;
+  padding: 12px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.estoque-button:hover {
+  background: #357ab7;
+}

@@ -1,0 +1,38 @@
+/* ======== NAVBAR ======== */
+.navbar-container {
+  width: 100%;
+  background: #4a90e2;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;   /* ADICIONE ISSO */
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-user {
+  font-weight: 600;
+  margin-right: 0; /* TIRA O 120vh */
+}
+
+.navbar-button {
+  background: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a90e2;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.navbar-button:hover {
+  background: #e9e9e9;
+  transform: scale(1.02);
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px; /* distância entre os botões */
+  margin-right: 100px;
+}
